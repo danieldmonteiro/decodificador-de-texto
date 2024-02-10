@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang=“pt-br”>
+
+	<head>	
+		<meta charset=“UTF-8”>
+		<meta http-equiv=“X-UA-Compatible” content=“IE=edge”>
+		<meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+		<link rel="stylesheet" href="style.css">
+		<title>Decodificador de Texto</title>
+	</head>
+
+	<body>	
+		<header class=“cabecalho”></header>
+
+		<main class=“aplicacao”>
+			<section class=“aplicacao__digitacao”>
+				<img src="./img/frame.svg" alt="logo" class="cabecalho__imagem">
+                <textarea name="mensagem" id="mensagem" placeholder="Digite seu texto" required></textarea>
+                <div class=“aplicacao__digitacao__botao”>
+					<button onclick="criptografar()" class="aplicacao__digitacao__botao__criptografar">Criptografar</button>
+					<button onclick="descriptografar()" class="aplicacao__digitacao__botao__descriptografar">Descriptografar</button>
+				</div>
+			</section>
+            <section class="aplicacao__resultado">
+                <div class="aplicacao__resultado__imagem">
+					<img src="./img/imagemdisplay1.svg" alt="imagem resultado" class="aplicacao__resultado__imagem__figura">
+					<p class="aplicacao__resultado__imagem__texto">
+						Nenhum resultado encontrado
+					</p>					
+                </div>
+          	</section>		
+		</main>
+		
+		<footer class=“rodape”>
+			<p>Desenvolvido por Daniel Monteiro</p>
+		</footer>
+
+		<script src="app.js" defer></script>
+		
+	</body>
+
+</html>
