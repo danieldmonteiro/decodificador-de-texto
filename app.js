@@ -17,7 +17,7 @@ function criptografar() {
                 .toLowerCase()
                 .normalize('NFD').replace(/[\u0300-\u0303\u0327]/g, "")
                 .replace(/[^a-z ]/g, "")
-                .replaceAll(/e/g, "enter")
+                .replace(/e/g, "enter")
                 .replace(/i/g, "imes")
                 .replace(/u/g, "ufat")
                 .replace(/a/g, "ai")
@@ -29,7 +29,7 @@ function criptografar() {
                 .toLowerCase()
                 .normalize('NFD').replace(/[\u0300-\u0303\u0327]/g, "")
                 .replace(/[^a-z ]/g, "")
-                .replaceAll(/e/g, "enter")
+                .replace(/e/g, "enter")
                 .replace(/i/g, "imes")
                 .replace(/u/g, "ufat")
                 .replace(/a/g, "ai")
@@ -49,11 +49,43 @@ function copiar() {
     caixaTextoDireito.select();
     caixaTextoDireito.setSelectionRange(0, 99999); //copia em dispositivos moveis
     navigator.clipboard.writeText(caixaTextoDireito.value);
-  };
+};
 
-// function descriptografar() {
-//
-//};
+function descriptografar() {
+    texto = document.getElementById("mensagem").value;
+    caixaResultadoBoxInicio = document.getElementById("aplicacao__resultado__id");
+    if (texto.length > 4) {
+        if (caixaResultadoBoxInicio == null) {
+            textoDescriptografado = texto
+                .toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u0303\u0327]/g, "")
+                .replace(/[^a-z ]/g, "")
+                .replace(/enter/g, "e")
+                .replace(/imes/g, "i")
+                .replace(/ufait/g, "u")
+                .replace(/ai/g, "a")
+                .replace(/ober/g, "o");
+            let textoResultadoCripto = document.getElementById("mensagem__resultado");
+            textoResultadoCripto.value = textoDescriptografado;
+        } else {
+            textoDescriptografado = texto
+                .toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u0303\u0327]/g, "")
+                .replace(/[^a-z ]/g, "")
+                .replace(/enter/g, "e")
+                .replace(/imes/g, "i")
+                .replace(/ufait/g, "u")
+                .replace(/ai/g, "a")
+                .replace(/ober/g, "o");
+            caixaResultadoBoxInicio.remove();
+            caixaResultadoBoxInserir.insertAdjacentHTML("beforeend", '<section class="aplicacao__resultado__box"><div class="caixa__resultado"><textarea id="mensagem__resultado"></textarea></div><div class="aplicacao__resultado__botao" id="botao__copiar"><button onclick="copiar()" class="aplicacao__resultado__botao__copiar">Copiar</button></div></section>');      
+            let textoResultadoCripto = document.getElementById("mensagem__resultado");
+            textoResultadoCripto.value = textoDescriptografado;
+        };
+    } else {
+        location.reload();
+    };
+};
 
 // A letra "e" é convertida para "enter"
 // A letra "i" é convertida para "imes"
