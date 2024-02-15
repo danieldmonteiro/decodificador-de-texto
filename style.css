@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
 	--cor-primaria: #F3F5FC;
@@ -6,7 +6,7 @@
 	--cor-terciaria: #0A3871;
     --cor-quaternaria: #343A40;
 	--cor-hover: #D8DFE8;
-	--fonte-primaria: 'Inter', sans-serif;
+	--fonte-primaria: "Inter", sans-serif;
 }
 
 * {
@@ -25,6 +25,13 @@ header {
 	margin-bottom: 2.5rem;
 }
 
+main {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 82px;
+}
+
 .cabecalho__imagem {
 	width: 7.5rem;
 	height: 3rem;
@@ -33,13 +40,6 @@ header {
 	margin-bottom: 2.5rem;
 	margin-top: 0px;
 	gap: 2.5rem;
-}
-
-main {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	gap: 82px;
 }
 
 .aplicacao__digitacao {
@@ -169,4 +169,167 @@ footer {
 	color: var(--cor-secundaria);
 	font-weight: 400;
 	margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+	main {
+		flex-direction: column;
+	}
+	#mensagem {
+		width: 40rem;
+		height: 40rem;
+		margin-top: 4rem;
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
+	.aplicacao__digitacao__botao__criptografar {
+		
+		width: 19rem;
+		margin-top: 2rem;
+		margin-left: 5rem;
+		margin-right: 0.5rem;
+	}
+	
+	.aplicacao__digitacao__botao__descriptografar {
+	
+		width: 19rem;
+		margin-top: 2rem;
+		margin-left: 0.5rem;
+		margin-right: 3rem;
+	}
+	.aplicacao__resultado {
+		
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.aplicacao__resultado__imagem {
+		display: none;
+	}
+	
+	.aplicacao__resultado__box {		
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		margin-right: 2rem;
+		margin-left: 2rem;
+	}
+	
+	.aplicacao__resultado__imagem__texto {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		padding-left: 9rem;
+		padding-right: 9rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-top: 0;
+	}
+	
+	#mensagem__resultado {
+		width: 33rem;
+		height: 20rem;
+		padding: 0rem;
+		margin-top: 0rem;
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	
+	.aplicacao__resultado__botao__copiar {
+		
+		padding: 1rem 1.5rem;
+		width: 34rem;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		margin-top: 3rem;
+	}
+
+	@media (max-width: 375px) {
+		main {
+			flex-direction: column;
+		}
+
+		#mensagem {
+			width: 16rem;
+			height: 16rem;
+			font-size: 1rem;
+			margin-top: 2rem;
+			margin-left: 3rem;
+			margin-right: 3rem;
+		}
+
+		.aplicacao__digitacao__botao__criptografar {
+			
+			width: 19rem;
+			margin-top: 2rem;
+			margin-left: 3rem;
+			margin-right: 1rem;
+			
+		}
+		
+		.aplicacao__digitacao__botao__descriptografar {
+		
+			width: 19rem;
+			margin-top: 2rem;
+			margin-left: 3rem;
+			margin-right: 1rem;
+			
+		}
+		.aplicacao__resultado {
+			
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			margin-top: 0;
+			margin-right: 0;
+			margin-left: 0;
+		}
+	
+		.aplicacao__resultado__imagem {
+			display: none;
+		}
+		
+		.aplicacao__resultado__box {		
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+			margin-right: 2rem;
+			margin-left: 2rem;
+		}
+		
+		.aplicacao__resultado__imagem__texto {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+			font-size: 1rem;
+			font-weight: 700;
+			margin-top: 0;
+		}
+		
+		#mensagem__resultado {
+			width: 16rem;
+			height: 16rem;
+			padding: 0.3rem;
+			
+		}
+		
+		.aplicacao__resultado__botao__copiar {
+			
+			padding: 1rem 1.5rem;
+			width: 19rem;
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+			margin-top: 3rem;
+		}
+	}
+	
+	
 }
