@@ -47,7 +47,7 @@ main {
 	flex-direction: column;
 }
 
-textarea {
+#mensagem {
     width: 42rem;
     height: 40rem;
     border-radius: 0%;
@@ -107,12 +107,58 @@ textarea {
 	margin-right: 2.5rem;
 }
 
+.aplicacao__resultado__box {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--cor-secundaria);
+	border-radius: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 3rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-right: 2.5rem;
+}
+
 .aplicacao__resultado__imagem__texto {
 	padding: 1rem 1.5rem;
 	font-size: 1.5rem;
 	font-weight: 700;
 	text-align: center;
 	margin-top: 1rem;
+}
+
+#mensagem__resultado {
+	width: 22rem;
+    height: 48rem;
+    border-radius: 0%;
+	background-color: var(--cor-secundaria);
+    border: none;
+    padding: 0rem;
+    font-size: 1rem;
+    font-weight: 400;
+	color: var(--cor-terciaria);
+	margin-top: 0rem;
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+.aplicacao__resultado__botao__copiar {
+	border-radius: 1.5rem;
+    background: var(--cor-secundaria);
+    padding: 1rem 1.5rem;
+    width: 21rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border: solid 1px;
+	border-color: var(--cor-terciaria);
+	color: var(--cor-terciaria);
+    margin-left: 0.8rem;
+	margin-right: 0.8rem;
+	margin-top: 10rem;
+}
+
+.aplicacao__resultado__botao__copiar:hover {
+	background-color: var(--cor-hover);
 }
 
 footer {
